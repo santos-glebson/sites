@@ -6,11 +6,131 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Delin Barbearia</title>
+  <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@500;700&family=Mukta&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
+  <!-- Header -->
 
+  <header>
+    <a href="index.html" class="logo"><img src="./assets/logo.png" alt=""></a>
+    <img src="./assets//menu.svg" alt="Menu" onclick="openNav()" class="btn-menu">
+    <nav id="header-nav">
+      <img src="./assets/close.svg" alt="Fechar" onclick="closeNav()" class="btn-close-menu">
+      <ul>
+        <li>Início</li>
+        <li>Sobre</li>
+        <li>Serviços</li>
+        <li>Depoimentos</li>
+        <li>Contato</li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home -->
+
+  <section id="home">
+    <div class="home-box-image">
+      <div class="image-shadow"></div>
+      <img src="./assets/barber-shop-1-web.jpg" alt="Barbearia">
+    </div>
+    <div class="home-info ">
+      <h1>Saúde para os seus cabelos e barba</h1>
+      <p>Uma barbearia exclusiva em Maringá e com profissionais de ponta.</p>
+      <a href="#" class="btn">Agendar um horário</a>
+    </div>
+  </section>
+
+  <div class="hr"></div>
+
+  <!-- Sobre -->
+
+  <section id="sobre">
+    <div class="sobre-box-image">
+      <div class="image-shadow"></div>
+      <img src="./assets/barber-shop-2-web.jpg" alt="Barbearia">
+    </div>
+    <div class="sobre-info ">
+      <h1>Sobre nós</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sagittis arcu quis nisi luctus, id accumsan felis tristique. Proin quis bibendum diam. Sed consequat nisl laoreet eros ultricies pellentesque. Nullam in est porta, pellentesque massa vitae, vehicula risus.
+
+        In placerat, felis vitae sodales dictum, lacus quam pretium mi, ut pretium urna turpis eu dui. Vestibulum id ullamcorper nibh. Donec luctus, nunc finibus elementum suscipit, tortor augue vulputate sapien, vitae feugiat enim augue sed. </p>
+    </div>
+  </section>
+
+  <div class="hr"></div>
+
+  <!-- Serviços -->
+
+  <section id="servicos">
+    <div class="servicos-info ">
+      <h1>Serviços</h1>
+      <p>Com mais de 10 anos no mercado, o Beautysalon já conquistou clientes de inúmeros países com seus tratamentos exclusivos e totalmente naturais.</p>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <img src="./assets/hair.svg" alt="Cortes">
+        <h2>Cortes</h2>
+        <p>A nossa equipe é repleta de profissionais renomados, famosos por lançarem tendências com cortes diferenciados e clássicos.</p>
+      </div>
+      <div class="card">
+        <img src="./assets/beard.svg" alt="Cortes">
+        <h2>Barba</h2>
+        <p>A nossa equipe é repleta de profissionais renomados, famosos por lançarem tendências de barbas diferenciadas e estilosas.</p>
+      </div>
+      <div class="card">
+        <img src="./assets/eyebrow.svg" alt="Cortes">
+        <h2>Sobrancelha</h2>
+        <p>A nossa equipe é repleta de profissionais renomados, famosos por lançarem tendências de sobrancelhas</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="hr"></div>
+
+  <section id="depo">
+    <h1>Depoimentos de
+      quem já passou
+      por aqui
+    </h1>
+    <div class="slider">
+      <div class="slides">
+        <div class="slide">
+          <blockquote>
+            Eu sou cliente do Beautysalon há 5 anos e não troco por nada! Certamente meu cabelo mudou muito depois que comecei a tratar somente com produtos naturais e veganos. São profissionais incríveis e qualificados.
+          </blockquote>
+          <cite><img src="https://randomuser.me/api/portraits/women/70.jpg" alt="Cliente">Wanessa Souza</cite>
+        </div>
+        <div class="slide">
+          <blockquote>
+            Eu sou cliente do Beautysalon há 5 anos e não troco por nada! Certamente meu cabelo mudou muito depois que comecei a tratar somente com produtos naturais e veganos. São profissionais incríveis e qualificados.
+          </blockquote>
+          <cite><img src="https://randomuser.me/api/portraits/women/70.jpg" alt="Cliente">Júlia Souza</cite>
+        </div>
+      </div>
+      <div class="box-controlers">
+        <input type="radio" class="radio-slide">
+        <input type="radio" class="radio-slide">
+        <input type="radio" class="radio-slide">
+      </div>
+    </div>
+
+
+  </section>
+
+
+
+  <div class="sobre-info "></div>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
