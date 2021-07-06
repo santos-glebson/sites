@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Mukta", sans-serif;
+  scroll-behavior: smooth;
 }
 
 img {
@@ -37,6 +38,13 @@ a {
   color: var(--color6);
   border-radius: 7px;
   margin: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.btn i {
+  margin-right: 10px;
+  font-size: 24px;
 }
 
 ul {
@@ -54,7 +62,7 @@ ul {
   --color2: #262626;
   --color3: #9e8272;
   --color4: #a68160;
-  --color5: #a6a5a4;
+  --color5: #d8d8d8;
   --color6: #ffff;
 }
 
@@ -119,6 +127,10 @@ header li {
   text-align: center;
 }
 
+header li a {
+  color: var(--color2);
+}
+
 /* Home */
 
 #home {
@@ -148,6 +160,9 @@ header li {
 #home .home-info {
   margin-left: 24px;
   margin-right: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #home img {
@@ -158,7 +173,6 @@ header li {
 }
 
 #home a {
-  display: block;
   margin-bottom: 80px;
 }
 
@@ -255,21 +269,32 @@ header li {
   scroll-snap-type: x mandatory;
 }
 
+#depo .slider::-webkit-scrollbar {
+  display: none;
+}
+
 #depo .slides {
   display: flex;
-  width: calc(300% + 76px);
-  padding: 5px;
+  width: 300%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  justify-content: space-between;
 }
 
 #depo .slide {
   padding: 32px;
   box-shadow: 0 0 7px rgba(0, 0, 1, 0.13);
-  margin-right: 53px;
+  margin-right: 15px;
+  margin-left: 15px;
   scroll-snap-align: center;
+  transition: all 1s;
+  flex: 1;
 }
 
-#depo .slide:last-child {
-  margin-right: 0;
+#depo .slide:nth-child(4),
+#depo .slide:nth-child(5),
+#depo .slide:nth-child(6) {
+  display: none;
 }
 
 #depo cite {
@@ -295,6 +320,112 @@ header li {
 #depo .box-controlers {
   text-align: center;
   margin: 32px 24px 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.radio-slide {
+  width: 10px;
+  height: 10px;
+  background-color: var(--color5);
+  border-radius: 50%;
+  margin: 4px;
+}
+
+.radio-checked {
+  background-color: var(--color3);
+}
+
+/* Contato */
+
+#contato {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+#contato h1 {
+  margin-bottom: 0;
+}
+
+#contato p {
+  margin-bottom: 8px;
+}
+
+#contato .contato-info {
+  margin: 32px 24px 40px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#contato .contato-info a {
+  margin-left: 0;
+  text-align: center;
+}
+
+#contato .contato-date {
+  margin: 0px 24px 80px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  display: flex;
+  justify-content: center;
+}
+
+#contato .contato-date i {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+#contato .contato-date a {
+  color: var(--color3);
+  margin-bottom: 32px;
+}
+
+#contato .contato-date a:last-child {
+  color: var(--color3);
+  margin-bottom: 0;
+}
+
+/* Footer */
+
+footer {
+  background-color: var(--color3);
+  padding: 48px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer .rights a {
+  display: inline-block;
+}
+
+footer > a {
+  margin-bottom: 24px;
+  text-align: center;
+  display: inline-block;
+}
+
+footer p {
+  color: var(--color6);
+  margin: 6px auto;
+}
+
+footer .social {
+  width: 24px;
+  display: flex;
+  justify-content: center;
+  margin: 32px auto;
+  color: white;
+}
+
+footer .social i {
+  font-size: 32px;
+  margin: 0 16px;
+  color: white;
 }
 
 /* -------------------------------------------------------- */
@@ -374,6 +505,16 @@ header li {
   #servicos {
     margin-left: 48px;
     margin-right: 48px;
+    text-align: center;
+  }
+
+  #servicos .servicos-info {
+    margin: 0 auto;
+  }
+
+  #servicos .servicos-info p {
+    max-width: 80%;
+    margin: 0 auto;
   }
 
   #servicos .cards {
@@ -385,6 +526,64 @@ header li {
     margin-left: 24px;
     margin-right: 24px;
     flex: 1 0 250px;
+  }
+
+  #servicos .servicos-info {
+    margin: 0 auto;
+  }
+
+  /* Depoimentos */
+
+  #depo h1 {
+    margin: 0 auto;
+    margin-top: 80px;
+    margin-bottom: 64px;
+    max-width: 33.33%;
+    text-align: center;
+  }
+
+  #depo .slider {
+    margin-left: 123px;
+    margin-right: 123px;
+  }
+
+  #depo .slide {
+    scroll-snap-align: start;
+    scroll-margin-left: 15px;
+  }
+
+  #depo .slide:nth-child(3) {
+    margin-right: 15px;
+  }
+
+  #depo .slide:nth-child(4),
+  #depo .slide:nth-child(5),
+  #depo .slide:nth-child(6) {
+    display: block;
+  }
+
+  /* Contato */
+
+  #contato {
+    flex-direction: row;
+  }
+
+  #contato .contato-info {
+    flex: 1;
+  }
+  #contato .contato-date {
+    flex: 1;
+  }
+
+  /* Footer */
+
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  footer .rights,
+  footer .social {
+    flex: 1;
   }
 }
 

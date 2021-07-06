@@ -12,6 +12,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@500;700&family=Mukta&display=swap" rel="stylesheet">
 
+  <!-- Font Awesome -->
+
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
 
@@ -25,12 +29,12 @@
     <img src="./assets//menu.svg" alt="Menu" onclick="openNav()" class="btn-menu">
     <nav id="header-nav">
       <img src="./assets/close.svg" alt="Fechar" onclick="closeNav()" class="btn-close-menu">
-      <ul>
-        <li>Início</li>
-        <li>Sobre</li>
-        <li>Serviços</li>
-        <li>Depoimentos</li>
-        <li>Contato</li>
+      <ul id="menu-ul">
+        <li><a href="#home">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#contato">Contato</a></li>
       </ul>
     </nav>
   </header>
@@ -45,7 +49,7 @@
     <div class="home-info ">
       <h1>Saúde para os seus cabelos e barba</h1>
       <p>Uma barbearia exclusiva em Maringá e com profissionais de ponta.</p>
-      <a href="https://api.whatsapp.com/send?phone=5544997052552&text=Ol%C3%A1%20Glebson%2C%20gostaria%20de%20agendar%20um%20hor%C3%A1rio." class="btn" _blank>Agendar um horário</a>
+      <a href="https://api.whatsapp.com/send?phone=5544997052552&text=Ol%C3%A1%20Glebson%2C%20gostaria%20de%20agendar%20um%20hor%C3%A1rio." class="btn" _blank><i class="fab fa-whatsapp"></i>Agendar um horário</a>
     </div>
   </section>
 
@@ -103,39 +107,96 @@
       quem já passou
       por aqui
     </h1>
-    <div class="slider">
+    <div class="slider" onscroll="scrollSlide()">
       <div class="slides">
         <div class="slide">
           <blockquote>
             <img src="./assets/aspas.svg" alt="Aspas" class="aspas">
             Eu sou cliente do Beautysalon há 5 anos e não troco por nada! Certamente meu cabelo mudou muito depois que comecei a tratar somente com produtos naturais e veganos. São profissionais incríveis e qualificados!
           </blockquote>
-          <cite><img src="https://randomuser.me/api/portraits/women/70.jpg" alt="Cliente" class="depo-foto">Wanessa Souza</cite>
+          <cite><img src="https://randomuser.me/api/portraits/women/70.jpg" alt="Cliente" class="depo-foto">User 1</cite>
         </div>
         <div class="slide">
           <blockquote>
             <img src="./assets/aspas.svg" alt="Aspas" class="aspas">
             Eu sou cliente do Beautysalon há 5 anos e não troco por nada! Certamente meu cabelo mudou muito depois que comecei a tratar somente com produtos naturais e veganos. São profissionais incríveis e qualificados!
           </blockquote>
-          <cite><img src="https://randomuser.me/api/portraits/women/70.jpg" alt="Cliente" class="depo-foto">Wanessa Souza</cite>
+          <cite><img src="https://randomuser.me/api/portraits/women/70.jpg" alt="Cliente" class="depo-foto">User 2</cite>
         </div>
         <div class="slide">
           <blockquote>
             <img src="./assets/aspas.svg" alt="Aspas" class="aspas">
             Eu sou cliente do Beautysalon há 5 anos e não troco por nada! Certamente meu cabelo mudou muito depois que comecei a tratar somente com produtos naturais e veganos. São profissionais incríveis e qualificados!
           </blockquote>
-          <cite><img src="https://randomuser.me/api/portraits/women/70.jpg" alt="Cliente" class="depo-foto">Wanessa Souza</cite>
+          <cite><img src="https://randomuser.me/api/portraits/women/70.jpg" alt="Cliente" class="depo-foto">User 3</cite>
+        </div>
+        <div class="slide">
+          <blockquote>
+            <img src="./assets/aspas.svg" alt="Aspas" class="aspas">
+            Eu sou cliente do Beautysalon há 5 anos e não troco por nada! Certamente meu cabelo mudou muito depois que comecei a tratar somente com produtos naturais e veganos. São profissionais incríveis e qualificados!
+          </blockquote>
+          <cite><img src="https://randomuser.me/api/portraits/women/70.jpg" alt="Cliente" class="depo-foto">User 4</cite>
+        </div>
+        <div class="slide">
+          <blockquote>
+            <img src="./assets/aspas.svg" alt="Aspas" class="aspas">
+            Eu sou cliente do Beautysalon há 5 anos e não troco por nada! Certamente meu cabelo mudou muito depois que comecei a tratar somente com produtos naturais e veganos. São profissionais incríveis e qualificados!
+          </blockquote>
+          <cite><img src="https://randomuser.me/api/portraits/women/70.jpg" alt="Cliente" class="depo-foto">User 5</cite>
+        </div>
+        <div class="slide">
+          <blockquote>
+            <img src="./assets/aspas.svg" alt="Aspas" class="aspas">
+            Eu sou cliente do Beautysalon há 5 anos e não troco por nada! Certamente meu cabelo mudou muito depois que comecei a tratar somente com produtos naturais e veganos. São profissionais incríveis e qualificados!
+          </blockquote>
+          <cite><img src="https://randomuser.me/api/portraits/women/70.jpg" alt="Cliente" class="depo-foto">User 6</cite>
         </div>
       </div>
     </div>
     <div class="box-controlers">
-      <input type="radio" class="radio-slide">
-      <input type="radio" class="radio-slide">
-      <input type="radio" class="radio-slide">
+      <div class="radio-slide radio-checked" id="r1" onclick="clickRadio(this)"></div>
+      <div class="radio-slide" id="r2" onclick="clickRadio(this)"></div>
+      <div class="radio-slide" id="r3" onclick="clickRadio(this)"></div>
+    </div>
+  </section>
+
+  <button onclick="">teste</button>
+
+  <div class="hr"></div>
+
+  <!-- Contato -->
+
+  <section id="contato">
+    <div class="contato-info ">
+      <h1>Entre em contato com a gente!</h1>
+      <p>Entre em contato com a Beautysalon, queremos tirar suas dúvidas, ouvir suas críticas e sugestões.</p>
+      <a href="https://api.whatsapp.com/send?phone=5544997052552&text=Ol%C3%A1%20Glebson%2C%20gostaria%20de%20agendar%20um%20hor%C3%A1rio." class="btn" _blank><i class="fab fa-whatsapp"></i>Entrar em contato</a>
+    </div>
+    <div class="contato-date">
+      <a href="#"><i class="fas fa-phone"></i>44 9 9705-2552</a>
+      <a href="#"><i class="fas fa-map-marker-alt"></i>R. Amauri Souza, 346</a>
+      <a href="#"><i class="fas fa-envelope"></i>contato@glebson.com</a>
     </div>
   </section>
 
   <div class="hr"></div>
+
+  <!-- Footer -->
+
+  <footer>
+    <div class="rights">
+      <a href="index.html" class="logo"><img src="./assets/logo-branca.png" alt=""></a>
+      <p>@2021 Delin Barbearia</p>
+      <p>Todos os direitos reservados.</p>
+    </div>
+    <div class="social">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+
+  </footer>
+
+
 
   <script src="script.js"></script>
 </body>
