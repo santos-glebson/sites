@@ -110,7 +110,7 @@ header nav img {
   z-index: 2;
   top: 0;
   right: 0;
-  margin: 20px;
+  padding: 20px 36px;
   display: block;
 }
 
@@ -600,6 +600,10 @@ footer .social i {
     height: auto;
   }
 
+  header nav img {
+    display: none;
+  }
+
   header ul {
     flex-direction: row;
     align-items: center;
@@ -615,7 +619,7 @@ footer .social i {
     display: none;
   }
 
-  header nav img {
+  header img {
     display: none;
   }
 
